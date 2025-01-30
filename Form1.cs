@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBaseTest.DataEF;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace DataBaseTest
 {
     public partial class Form1 : Form
     {
+        Model1 model = new Model1();
         public Form1()
         {
             InitializeComponent();
@@ -19,8 +21,23 @@ namespace DataBaseTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "chernyshovDataSet.Students". При необходимости она может быть перемещена или удалена.
-            this.studentsTableAdapter.Fill(this.chernyshovDataSet.Students);
+            dataGridView1.DataSource = model.Students.ToList();
+        }
+
+        private void AddNew_Click(object sender, EventArgs e)
+        {
+            Students students = new Students();
+            students.ID = Convert.ToInt32(iDTextBox.Text);
+            students.Name = nameTextBox.Text;
+            students.Grouppa = grouppaTextBox.Text;
+            students.Age = Convert.ToInt32(ageTextBox.Text);
+            model.Students.Add(students);
+            model.SaveChanges();
+            dataGridView1.DataSource = model.Students.ToList();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
