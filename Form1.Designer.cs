@@ -29,220 +29,128 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label ageLabel;
-            System.Windows.Forms.Label grouppaLabel;
-            System.Windows.Forms.Label iDLabel;
-            System.Windows.Forms.Label nameLabel;
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.AddNew = new System.Windows.Forms.Button();
-            this.ageTextBox = new System.Windows.Forms.TextBox();
-            this.grouppaTextBox = new System.Windows.Forms.TextBox();
-            this.iDTextBox = new System.Windows.Forms.TextBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.changeButton = new System.Windows.Forms.Button();
-            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grouppaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deleteButton = new System.Windows.Forms.Button();
-            ageLabel = new System.Windows.Forms.Label();
-            grouppaLabel = new System.Windows.Forms.Label();
-            iDLabel = new System.Windows.Forms.Label();
-            nameLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
+            this.avtomobilsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.avtomobilsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.avtomobilsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avtomobilsDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ageLabel
-            // 
-            ageLabel.AutoSize = true;
-            ageLabel.Location = new System.Drawing.Point(55, 223);
-            ageLabel.Name = "ageLabel";
-            ageLabel.Size = new System.Drawing.Size(29, 13);
-            ageLabel.TabIndex = 3;
-            ageLabel.Text = "Age:";
-            // 
-            // grouppaLabel
-            // 
-            grouppaLabel.AutoSize = true;
-            grouppaLabel.Location = new System.Drawing.Point(55, 249);
-            grouppaLabel.Name = "grouppaLabel";
-            grouppaLabel.Size = new System.Drawing.Size(51, 13);
-            grouppaLabel.TabIndex = 5;
-            grouppaLabel.Text = "Grouppa:";
-            // 
-            // iDLabel
-            // 
-            iDLabel.AutoSize = true;
-            iDLabel.Location = new System.Drawing.Point(55, 275);
-            iDLabel.Name = "iDLabel";
-            iDLabel.Size = new System.Drawing.Size(21, 13);
-            iDLabel.TabIndex = 7;
-            iDLabel.Text = "ID:";
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(55, 301);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(38, 13);
-            nameLabel.TabIndex = 9;
-            nameLabel.Text = "Name:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.grouppaDataGridViewTextBoxColumn,
-            this.ageDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.studentsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 150);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // AddNew
             // 
-            this.AddNew.Location = new System.Drawing.Point(82, 403);
+            this.AddNew.Location = new System.Drawing.Point(235, 378);
             this.AddNew.Name = "AddNew";
-            this.AddNew.Size = new System.Drawing.Size(75, 23);
+            this.AddNew.Size = new System.Drawing.Size(75, 25);
             this.AddNew.TabIndex = 1;
             this.AddNew.Text = "Добавить";
             this.AddNew.UseVisualStyleBackColor = true;
             this.AddNew.Click += new System.EventHandler(this.AddNew_Click);
             // 
-            // ageTextBox
-            // 
-            this.ageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "Age", true));
-            this.ageTextBox.Location = new System.Drawing.Point(112, 220);
-            this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.Size = new System.Drawing.Size(100, 20);
-            this.ageTextBox.TabIndex = 4;
-            // 
-            // grouppaTextBox
-            // 
-            this.grouppaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "Grouppa", true));
-            this.grouppaTextBox.Location = new System.Drawing.Point(112, 246);
-            this.grouppaTextBox.Name = "grouppaTextBox";
-            this.grouppaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.grouppaTextBox.TabIndex = 6;
-            // 
-            // iDTextBox
-            // 
-            this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "ID", true));
-            this.iDTextBox.Location = new System.Drawing.Point(112, 272);
-            this.iDTextBox.Name = "iDTextBox";
-            this.iDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.iDTextBox.TabIndex = 8;
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(112, 298);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nameTextBox.TabIndex = 10;
-            // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(224, 402);
+            this.changeButton.Location = new System.Drawing.Point(377, 377);
             this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(75, 23);
+            this.changeButton.Size = new System.Drawing.Size(75, 25);
             this.changeButton.TabIndex = 11;
             this.changeButton.Text = "Изменить";
             this.changeButton.UseVisualStyleBackColor = true;
             this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
-            // studentsBindingSource
-            // 
-            this.studentsBindingSource.DataSource = typeof(DataBaseTest.DataEF.Students);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // grouppaDataGridViewTextBoxColumn
-            // 
-            this.grouppaDataGridViewTextBoxColumn.DataPropertyName = "Grouppa";
-            this.grouppaDataGridViewTextBoxColumn.HeaderText = "Grouppa";
-            this.grouppaDataGridViewTextBoxColumn.Name = "grouppaDataGridViewTextBoxColumn";
-            this.grouppaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            this.ageDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(364, 402);
+            this.deleteButton.Location = new System.Drawing.Point(517, 377);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteButton.Size = new System.Drawing.Size(75, 25);
             this.deleteButton.TabIndex = 12;
             this.deleteButton.Text = "Удалить";
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // avtomobilsBindingSource
+            // 
+            this.avtomobilsBindingSource.DataSource = typeof(DataBaseTest.DataEF.Avtomobils);
+            // 
+            // avtomobilsDataGridView
+            // 
+            this.avtomobilsDataGridView.AutoGenerateColumns = false;
+            this.avtomobilsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.avtomobilsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.avtomobilsDataGridView.DataSource = this.avtomobilsBindingSource;
+            this.avtomobilsDataGridView.Location = new System.Drawing.Point(55, 25);
+            this.avtomobilsDataGridView.Name = "avtomobilsDataGridView";
+            this.avtomobilsDataGridView.Size = new System.Drawing.Size(698, 333);
+            this.avtomobilsDataGridView.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nomer";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nomer";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Vladelec";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Vladelec";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Marka";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Marka";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Vozrast";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Vozrast";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 450);
+            this.Controls.Add(this.avtomobilsDataGridView);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.changeButton);
-            this.Controls.Add(ageLabel);
-            this.Controls.Add(this.ageTextBox);
-            this.Controls.Add(grouppaLabel);
-            this.Controls.Add(this.grouppaTextBox);
-            this.Controls.Add(iDLabel);
-            this.Controls.Add(this.iDTextBox);
-            this.Controls.Add(nameLabel);
-            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.AddNew);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avtomobilsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avtomobilsDataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button AddNew;
-        private System.Windows.Forms.BindingSource studentsBindingSource;
-        private System.Windows.Forms.TextBox ageTextBox;
-        private System.Windows.Forms.TextBox grouppaTextBox;
-        private System.Windows.Forms.TextBox iDTextBox;
-        private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Button changeButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn grouppaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
-        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vladelecDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn markaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vozrastDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource avtomobilsBindingSource;
+        private System.Windows.Forms.DataGridView avtomobilsDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
 

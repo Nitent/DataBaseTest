@@ -14,32 +14,55 @@ namespace DataBaseTest
     public partial class Form2 : Form
     {
         public Model1 db { get; set; }
-        public Students students { get; set; }
-        public Form2()
+        public Avtomobils avtomobils { get; set; }
+        public Form2(Model1 _db)
         {
             InitializeComponent();
-        }
+            db = _db;
+            avtomobils = null;
 
+        }
+        public Form2(Model1 _db, Avtomobils _avtomobils)
+        {
+            InitializeComponent();
+            db = _db;
+            avtomobils = _avtomobils;
+        }
         private void Form2_Load(object sender, EventArgs e)
         {
-            ageText.Text = students.Age.ToString();
-            grouppaText.Text = students.Grouppa;
-            idText.Text = students.ID.ToString();
-            nameText.Text = students.Name;
+            if (avtomobils != null)
+            {
+                vozrastText.Text = avtomobils.Vozrast.ToString();
+                markaText.Text = avtomobils.Marka;
+                nomerText.Text = avtomobils.Nomer.ToString();
+                vladelecText.Text = avtomobils.Vladelec;
+                nomerText.ReadOnly = true;
+            }
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            students.Name = nameText.Text;
-            students.Grouppa = grouppaText.Text;
-            students.Age = Convert.ToInt32(ageText.Text);
-
+            if (avtomobils == null)
+            {
+                avtomobils = new Avtomobils();
+                avtomobils.Nomer = Convert.ToInt32(nomerText.Text);
+                avtomobils.Vladelec = vladelecText.Text;
+                avtomobils.Marka = markaText.Text;
+                avtomobils.Vozrast = Convert.ToInt32(vozrastText.Text);
+                db.Avtomobils.Add(avtomobils);
+            }
+            else
+            {
+                avtomobils.Vladelec = vladelecText.Text;
+                avtomobils.Marka = markaText.Text;
+                avtomobils.Vozrast = Convert.ToInt32(vozrastText.Text);
+            }
             try
             {
                 db.SaveChanges();
                 DialogResult = DialogResult.OK;
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.InnerException.Message);
             }

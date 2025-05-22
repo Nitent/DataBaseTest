@@ -21,19 +21,16 @@ namespace DataBaseTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            studentsBindingSource.DataSource = model.Students.ToList();
+            avtomobilsBindingSource.DataSource = model.Avtomobils.ToList();
         }
 
         private void AddNew_Click(object sender, EventArgs e)
         {
-            Students students = new Students();
-            students.ID = Convert.ToInt32(iDTextBox.Text);
-            students.Name = nameTextBox.Text;
-            students.Grouppa = grouppaTextBox.Text;
-            students.Age = Convert.ToInt32(ageTextBox.Text);
-            model.Students.Add(students);
-            model.SaveChanges();
-            studentsBindingSource.DataSource = model.Students.ToList();
+            Form2 frm = new Form2(model);     
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                avtomobilsBindingSource.DataSource = model.Avtomobils.ToList();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -43,27 +40,23 @@ namespace DataBaseTest
 
         private void changeButton_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
-            Students students = (Students)studentsBindingSource.Current;
-            frm.db = model;
-            frm.students = students;
-            DialogResult dr = frm.ShowDialog();
-
-            if (dr == DialogResult.OK)
+            Avtomobils avtomobils = (Avtomobils)avtomobilsBindingSource.Current;
+            Form2 frm = new Form2(model , avtomobils);
+            if (frm.ShowDialog() == DialogResult.OK)
             {
-                studentsBindingSource.DataSource = model.Students.ToList();
+                avtomobilsBindingSource.DataSource = model.Avtomobils.ToList();
             }
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            Students students = (Students)studentsBindingSource.Current;
+            Avtomobils avtomobils = (Avtomobils)avtomobilsBindingSource.Current;
             DialogResult dr = MessageBox.Show(
-                "Вы действительно хотите удалить студента - " + students.Name,
-                "Удаление студента", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                "Вы действительно хотите удалить автомобиль - " + avtomobils.Vladelec,
+                "Удаление автомобиля", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                model.Students.Remove(students);
+                model.Avtomobils.Remove(avtomobils);
                 try
                 {
                     model.SaveChanges();
@@ -72,7 +65,7 @@ namespace DataBaseTest
                 {
                     MessageBox.Show(ex.Message);
                 }
-                studentsBindingSource.DataSource = model.Students.ToList();
+                avtomobilsBindingSource.DataSource = model.Avtomobils.ToList();
             }
         }
     }

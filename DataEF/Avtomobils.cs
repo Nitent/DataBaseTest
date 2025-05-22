@@ -6,17 +6,18 @@ namespace DataBaseTest.DataEF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Students
+    public partial class Avtomobils
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
+        public int Nomer { get; set; }
 
-        [StringLength(250)]
-        public string Name { get; set; }
+        [StringLength(100)]
+        public string Vladelec { get; set; }
 
-        [StringLength(50)]
-        public string Grouppa { get; set; }
+        [StringLength(40)]
+        public string Marka { get; set; }
 
-        public int? Age { get; set; }
+        public int? Vozrast { get; set; }
     }
 }

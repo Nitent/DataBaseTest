@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.idLabel = new System.Windows.Forms.Label();
-            this.nameLabel = new System.Windows.Forms.Label();
+            this.nomerLabel = new System.Windows.Forms.Label();
+            this.vladelecLabel = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.idText = new System.Windows.Forms.TextBox();
-            this.nameText = new System.Windows.Forms.TextBox();
-            this.ageLabel = new System.Windows.Forms.Label();
-            this.gpuppaLabel = new System.Windows.Forms.Label();
-            this.ageText = new System.Windows.Forms.TextBox();
-            this.grouppaText = new System.Windows.Forms.TextBox();
+            this.nomerText = new System.Windows.Forms.TextBox();
+            this.vladelecText = new System.Windows.Forms.TextBox();
+            this.vozrastLabel = new System.Windows.Forms.Label();
+            this.markaLabel = new System.Windows.Forms.Label();
+            this.vozrastText = new System.Windows.Forms.TextBox();
+            this.markaText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // idLabel
+            // nomerLabel
             // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(269, 150);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(18, 13);
-            this.idLabel.TabIndex = 0;
-            this.idLabel.Text = "ID";
+            this.nomerLabel.AutoSize = true;
+            this.nomerLabel.Location = new System.Drawing.Point(120, 79);
+            this.nomerLabel.Name = "nomerLabel";
+            this.nomerLabel.Size = new System.Drawing.Size(38, 13);
+            this.nomerLabel.TabIndex = 0;
+            this.nomerLabel.Text = "Nomer";
             // 
-            // nameLabel
+            // vladelecLabel
             // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(266, 191);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(35, 13);
-            this.nameLabel.TabIndex = 1;
-            this.nameLabel.Text = "Name";
+            this.vladelecLabel.AutoSize = true;
+            this.vladelecLabel.Location = new System.Drawing.Point(117, 179);
+            this.vladelecLabel.Name = "vladelecLabel";
+            this.vladelecLabel.Size = new System.Drawing.Size(48, 13);
+            this.vladelecLabel.TabIndex = 1;
+            this.vladelecLabel.Text = "Vladelec";
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(269, 371);
+            this.saveButton.Location = new System.Drawing.Point(85, 243);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 2;
@@ -70,75 +70,74 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(487, 371);
+            this.exitButton.Location = new System.Drawing.Point(303, 243);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 3;
             this.exitButton.Text = "Выйти";
             this.exitButton.UseVisualStyleBackColor = true;
             // 
-            // idText
+            // nomerText
             // 
-            this.idText.Location = new System.Drawing.Point(462, 147);
-            this.idText.Name = "idText";
-            this.idText.ReadOnly = true;
-            this.idText.Size = new System.Drawing.Size(100, 20);
-            this.idText.TabIndex = 4;
+            this.nomerText.Location = new System.Drawing.Point(313, 76);
+            this.nomerText.Name = "nomerText";
+            this.nomerText.Size = new System.Drawing.Size(100, 20);
+            this.nomerText.TabIndex = 4;
             // 
-            // nameText
+            // vladelecText
             // 
-            this.nameText.Location = new System.Drawing.Point(462, 188);
-            this.nameText.Name = "nameText";
-            this.nameText.Size = new System.Drawing.Size(100, 20);
-            this.nameText.TabIndex = 5;
+            this.vladelecText.Location = new System.Drawing.Point(313, 176);
+            this.vladelecText.Name = "vladelecText";
+            this.vladelecText.Size = new System.Drawing.Size(100, 20);
+            this.vladelecText.TabIndex = 5;
             // 
-            // ageLabel
+            // vozrastLabel
             // 
-            this.ageLabel.AutoSize = true;
-            this.ageLabel.Location = new System.Drawing.Point(269, 74);
-            this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(26, 13);
-            this.ageLabel.TabIndex = 6;
-            this.ageLabel.Text = "Age";
+            this.vozrastLabel.AutoSize = true;
+            this.vozrastLabel.Location = new System.Drawing.Point(120, 115);
+            this.vozrastLabel.Name = "vozrastLabel";
+            this.vozrastLabel.Size = new System.Drawing.Size(42, 13);
+            this.vozrastLabel.TabIndex = 6;
+            this.vozrastLabel.Text = "Vozrast";
             // 
-            // gpuppaLabel
+            // markaLabel
             // 
-            this.gpuppaLabel.AutoSize = true;
-            this.gpuppaLabel.Location = new System.Drawing.Point(269, 112);
-            this.gpuppaLabel.Name = "gpuppaLabel";
-            this.gpuppaLabel.Size = new System.Drawing.Size(48, 13);
-            this.gpuppaLabel.TabIndex = 7;
-            this.gpuppaLabel.Text = "Grouppa";
+            this.markaLabel.AutoSize = true;
+            this.markaLabel.Location = new System.Drawing.Point(120, 153);
+            this.markaLabel.Name = "markaLabel";
+            this.markaLabel.Size = new System.Drawing.Size(37, 13);
+            this.markaLabel.TabIndex = 7;
+            this.markaLabel.Text = "Marka";
             // 
-            // ageText
+            // vozrastText
             // 
-            this.ageText.Location = new System.Drawing.Point(462, 71);
-            this.ageText.Name = "ageText";
-            this.ageText.Size = new System.Drawing.Size(100, 20);
-            this.ageText.TabIndex = 8;
+            this.vozrastText.Location = new System.Drawing.Point(313, 112);
+            this.vozrastText.Name = "vozrastText";
+            this.vozrastText.Size = new System.Drawing.Size(100, 20);
+            this.vozrastText.TabIndex = 8;
             // 
-            // grouppaText
+            // markaText
             // 
-            this.grouppaText.Location = new System.Drawing.Point(462, 109);
-            this.grouppaText.Name = "grouppaText";
-            this.grouppaText.Size = new System.Drawing.Size(100, 20);
-            this.grouppaText.TabIndex = 9;
+            this.markaText.Location = new System.Drawing.Point(313, 150);
+            this.markaText.Name = "markaText";
+            this.markaText.Size = new System.Drawing.Size(100, 20);
+            this.markaText.TabIndex = 9;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.grouppaText);
-            this.Controls.Add(this.ageText);
-            this.Controls.Add(this.gpuppaLabel);
-            this.Controls.Add(this.ageLabel);
-            this.Controls.Add(this.nameText);
-            this.Controls.Add(this.idText);
+            this.ClientSize = new System.Drawing.Size(458, 310);
+            this.Controls.Add(this.markaText);
+            this.Controls.Add(this.vozrastText);
+            this.Controls.Add(this.markaLabel);
+            this.Controls.Add(this.vozrastLabel);
+            this.Controls.Add(this.vladelecText);
+            this.Controls.Add(this.nomerText);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.nameLabel);
-            this.Controls.Add(this.idLabel);
+            this.Controls.Add(this.vladelecLabel);
+            this.Controls.Add(this.nomerLabel);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -149,15 +148,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label idLabel;
-        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label nomerLabel;
+        private System.Windows.Forms.Label vladelecLabel;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.TextBox idText;
-        private System.Windows.Forms.TextBox nameText;
-        private System.Windows.Forms.Label ageLabel;
-        private System.Windows.Forms.Label gpuppaLabel;
-        private System.Windows.Forms.TextBox ageText;
-        private System.Windows.Forms.TextBox grouppaText;
+        private System.Windows.Forms.TextBox nomerText;
+        private System.Windows.Forms.TextBox vladelecText;
+        private System.Windows.Forms.Label vozrastLabel;
+        private System.Windows.Forms.Label markaLabel;
+        private System.Windows.Forms.TextBox vozrastText;
+        private System.Windows.Forms.TextBox markaText;
     }
 }
